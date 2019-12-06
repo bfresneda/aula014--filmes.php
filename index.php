@@ -1,7 +1,16 @@
 <?php
-	include('./includes/filmes.php');
-	include('./includes/generos.php');
+
+include('./includes/generos.php');
+include('./includes/filmes.php');
+
+// echo('<pre>');
+// print_r($generos);
+// echo('</pre>');
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,11 +28,11 @@
 <body>
 	<nav>
 		<ul>
-			<?php
-				foreach($generos as $g){
-					echo('<li><a href="#">'.$g.'</a></li>');
-				}
-			?>
+		<?php foreach($generos as $genero):  ?>
+
+			<li><a href="#"> <?php echo $genero ?></a></li>
+
+		<?php endforeach;   ?>
 		</ul>
 		<form method="GET" action="busca.php">
 			<input type="text" name="trecho">
@@ -33,14 +42,17 @@
 	
 	<main>
 		<section>
-			<?php foreach($filmes as $i => $f){ ?>
-				<article>
-					<a href="filme.php?id=<?= $i ?>">
-						<img src="./assets/img/cartazes/cartaz-<?= $i ?>.png" alt="<?= $f['titulo'] ?>">
-						<span>Ver +</span>
-					</a>
-				</article>
-			<?php } ?>
+
+		<?php foreach($filmes as $pos=>$filme):   ?>
+			<article>
+
+
+				<a href="filme.php?pos=<?= $pos ?>">
+					<img src="./assets/img/cartazes/cartaz-<?= $pos ?>.png" alt="<?=$filme['titulo'] ?>">
+					<span>Ver +</span>
+				</a>
+			</article>
+			<?php endforeach ?>
 		</section>
 	</main>
 </body>
