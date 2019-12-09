@@ -42,11 +42,8 @@ include('./includes/filmes.php');
 	
 	<main>
 		<section>
-
 		<?php foreach($filmes as $pos=>$filme):   ?>
 			<article>
-
-
 				<a href="filme.php?pos=<?= $pos ?>">
 					<img src="./assets/img/cartazes/cartaz-<?= $pos ?>.png" alt="<?=$filme['titulo'] ?>">
 					<span>Ver +</span>
