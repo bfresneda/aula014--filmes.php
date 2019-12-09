@@ -35,8 +35,10 @@
 </head>
 
 <body>
-
-	<nav>	
+	<?php
+		include('./includes/menu.php')
+		?>
+	<!-- <nav>	
 		
 			<ul>
 				<li><a href="http://localhost/brunof/aula014/pratica/">HOME</a></li>
@@ -49,7 +51,7 @@
 			<input type="text" name="trecho">
 			<button type="submit">Buscar</button>
 		</form>
-	</nav>
+	</nav> -->
 	<main>
 
 		<h2> <?= $filme['titulo'] ?> </h2>
