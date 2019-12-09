@@ -28,8 +28,7 @@ include('./includes/filmes.php');
 <body>
 	<?php
 	 include('./includes/menu.php')
-	?>
-	
+	?>	
 	<main>
 		<section>
 		<?php foreach($filmes as $pos=>$filme):   ?>
