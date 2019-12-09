@@ -30,19 +30,21 @@
 
 </head>
 <body>
-	<nav>
+
+	<?php   include('./includes/menu.php') ?>
+	<!-- <nav>
 		<ul>
-			<?php
-				foreach($generos as $g){
-					echo('<li><a href="#">'.$g.'</a></li>');
-				}
-			?>
+		//	<?php
+		//		foreach($generos as $g){
+		//			echo('<li><a href="#">'.$g.'</a></li>');
+		//		}
+		//	?>
 		</ul>
 		<form method="GET" action="busca.php">
 			<input type="text" name="trecho">
 			<button type="submit">Buscar</button>
 		</form>
-	</nav>
+	</nav> -->
 	
 	<main>
 		<section>
